@@ -1,19 +1,21 @@
 import React from 'react';
+import {HashRouter, Route, Routes} from 'react-router-dom';
+import Footer from './layouts/Footer';
+import Header from './layouts/Header';
+import Homepage from './pages/Homepage';
 
 function App() {
   return (
-    <main className='container text-center'>
-      <span className='text-primary'>
-        <i className='bi bi-wifi-2 fs-1' />
-      </span>
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
-      <a href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-        Learn React
-      </a>
-    </main>
+    <HashRouter>
+      <Header />
+      <section className='flex-grow-1'>
+        <Routes>
+          <Route path='/' element={<Homepage />} />
+        </Routes>
+      </section>
+      <Footer />
+    </HashRouter>
   );
 }
 
-export default App;
+export default React.memo(App);
