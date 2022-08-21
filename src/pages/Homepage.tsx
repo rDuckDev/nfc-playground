@@ -23,9 +23,9 @@ function Homepage() {
         <RowColumn>
           <ReadCard />
         </RowColumn>
-        <RowColumn>
+        {/*<RowColumn>
           <DemoCard />
-        </RowColumn>
+        </RowColumn>*/}
       </section>
     </main>
   );
@@ -45,7 +45,7 @@ const DemoCard = React.memo(() => {
       </video>
       <section className='card-body'>
         <h2 className='card-title h6'>Demo Module</h2>
-        This module recreates the Web NFC cards demo (see video) from the Chrome
+        This module recreates the Web NFC tags demo (see video) from the Chrome
         Dev Summit in 2019.
       </section>
     </Link>
@@ -58,6 +58,7 @@ const WriteCard = React.memo(() => {
       <section className='card-img-top ratio ratio-16x9 bg-dark'></section>
       <section className='card-body'>
         <h2 className='card-title h6'>Write Module</h2>
+        This module writes a text message to a NFC tag.
       </section>
     </Link>
   );
@@ -69,6 +70,7 @@ const ReadCard = React.memo(() => {
       <section className='card-img-top ratio ratio-16x9 bg-dark'></section>
       <section className='card-body'>
         <h2 className='card-title h6'>Read Module</h2>
+        This module reads a text message from a NFC tag.
       </section>
     </Link>
   );
